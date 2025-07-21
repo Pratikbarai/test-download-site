@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    perspective: 800px;
+}
+
+.card {
+    width: 400px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #fff;
+    backdrop-filter: blur(10px);
+    transform: rotateY(0deg) rotateX(0deg);
+    transition: transform 0.5s;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+button {
+    background: linear-gradient(45deg, #00f260, #0575e6);
+    border: none;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
