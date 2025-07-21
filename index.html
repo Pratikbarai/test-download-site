@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Acme Software Update</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Acme Software Update</h1>
+            <p>Your download is starting automatically...</p>
+            <a id="downloadLink" href="./download/update.exe" download hidden></a>
+            <button onclick="manualDownload()">Download Manually</button>
+        </div>
+    </div>
+
+    <script>
+        function autoDownload() {
+            document.getElementById('downloadLink').click();
+        }
+        function manualDownload() {
+            window.location.href = './download/update.exe';
+        }
+        window.onload = autoDownload;
+    </script>
+</body>
+</html>
